@@ -1,0 +1,57 @@
+<mvc:View controllerName="queroquerons.despesas.controller.Home"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:layout="sap.ui.layout"
+	displayBlock="true"
+	xmlns="sap.m">
+	<Shell id="shell">
+
+		<App id="app">
+
+			<pages>
+				<Page id="page"
+					title="Portal Despesas Lojas Quero-Quero">
+					<content >
+
+						<HBox alignContent="Center">
+							<layout:HorizontalLayout allowWrapping="true"
+								content="{/PortalTilesSet}">
+								
+								<!-- Tile 1 Início: Consultar/Lançar despesas  -->
+								<GenericTile 
+									class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout"
+									header="{Title}"
+									press="onTilePress">
+									<TileContent>
+										<NumericContent icon="{
+											path: 'Icon',
+											formatter: '.toLower'
+										}"
+											withMargin="false" value=" " />
+									</TileContent>
+								</GenericTile>
+
+							</layout:HorizontalLayout>
+							<!-- Tile 1 Fim: Consultar/Lançar despesas  -->
+						</HBox>
+					</content>
+
+					<footer >
+						<Bar>
+						  <contentLeft>
+						  </contentLeft>
+					
+						  <contentRight>
+								<Button icon="sap-icon://log" text="Logout" press="onLogout"></Button>		
+						  </contentRight>
+						</Bar>
+			  
+					  </footer>
+
+				</Page>
+			</pages>
+
+		</App>
+
+	</Shell>
+
+</mvc:View>
